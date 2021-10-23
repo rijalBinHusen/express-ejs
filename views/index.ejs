@@ -10,9 +10,19 @@
 
 <body>
 
-    <p>Name: Rijal bin Husen</p>
-    <p>Age: 26</p>
+    <p>
+        Name: <%= name %>
+    </p>
 
+    <p>
+        Age: <%= age %>
+    </p>
+
+    <% for (let i=0; i < fruits.length; i++) { %>
+        <p>
+            fruit name <%= i %> : <%= fruits[i].name %>
+        </p>
+        <% } %>
 </body>
 
 </html>

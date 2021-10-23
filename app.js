@@ -7,7 +7,17 @@ app.set("views", "./views") //views directory
 app.set("view engine", "ejs") //template engine register
 
 app.get("/", (req, res) => {
-    res.render("index")
+    const fruits = [
+        {name: "apple"},
+        {name: "orange"},
+        {name: "melon"},
+        {name: "banana"}
+    ]
+    res.render("index", {
+        name: "Saiful Rizal",
+        age: 26,
+        fruits: fruits
+    })
 })
 
 app.get("/:name", (req, res) => res.send(`Nama saya: ${req.params.name}`))
